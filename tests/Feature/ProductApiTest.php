@@ -21,7 +21,7 @@ class ProductApiTest extends TestCase
         $user = User::factory()->create();
         Sanctum::actingAs($user, ['*']);
 
-        $response = $this->getJson('/api/productss');
+        $response = $this->getJson('/api/products');
 
         $response->assertStatus(200);
 
